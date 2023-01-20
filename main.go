@@ -55,11 +55,7 @@ func deserialize(serializedTree []int) (root *tree.TreeNode) {
 		return nil
 	}
 	root = tree.NewTreeNode(serializedTree[0])
-	if len > 0 {
-		root.Left = deserialize(serializedTree[1:])
-	}
-	if len > 1 {
-		root.Right = deserialize(serializedTree[2:])
-	}
+	root.Left = deserialize(serializedTree[1:])
+	root.Right = deserialize(serializedTree[1:])
 	return root
 }
