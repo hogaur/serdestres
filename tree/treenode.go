@@ -1,11 +1,11 @@
 package tree
 
 type TreeNode struct {
-	data  int
-	left  *TreeNode
-	right *TreeNode
+	Data  int
+	Left  *TreeNode
+	Right *TreeNode
 }
 
 func NewTreeNode(data int) *TreeNode {
-	return &TreeNode{}
+	return &TreeNode{Data: data, Left: nil, Right: nil}
 }

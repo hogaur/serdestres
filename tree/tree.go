@@ -1,9 +1,10 @@
 package tree
 
 type Tree struct {
-	root *TreeNode
+	Root *TreeNode
 }
 
-func NewTree(list []int) *Tree {
-	return &Tree{}
+func NewTree(root int) *Tree {
+	rootNode := NewTreeNode(root)
+	return &Tree{Root: rootNode}
 }
